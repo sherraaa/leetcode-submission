@@ -6,4 +6,4 @@ FROM ( -- find FIRST order
     SELECT MIN(order_date) AS first_order_date, MIN(customer_pref_delivery_date) AS first_cust_pref_delivery_date
     FROM delivery 
     GROUP BY customer_id
-) b
+) AS b
